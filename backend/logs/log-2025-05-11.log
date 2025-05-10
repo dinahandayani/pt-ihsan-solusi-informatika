@@ -18,3 +18,9 @@
 [2025-05-11 00:35:57] INFO: Method=DELETE, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=204, ResponseTime=1.808201ms, Message=Task deleted successfully
 [2025-05-11 00:36:00] INFO: Method=GET, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil mengambil semua task dari database, total: 0
 [2025-05-11 00:36:00] INFO: Method=GET, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=705.7µs, Message=Fetched all tasks, total: 0
+[2025-05-11 01:01:31] INFO: Koneksi ke database berhasil
+[2025-05-11 01:01:31] INFO: Server berjalan di http://localhost:8080
+[2025-05-11 01:18:38] INFO: Method=GET, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil mengambil semua task dari database, total: 0
+[2025-05-11 01:18:38] INFO: Method=GET, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=6.363899ms, Message=Fetched all tasks, total: 0
+[2025-05-11 01:19:14] INFO: Method=POST, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=201, ResponseTime=0s, Message=Task berhasil dibuat di database, ID: 3
+[2025-05-11 01:19:14] INFO: Method=POST, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=201, ResponseTime=8.774887ms, Message=Task created successfully, ID: 3
