@@ -11,6 +11,10 @@ import (
 )
 
 func main() {
+	// Inisialisasi Logger
+	// logs.InitLogger()
+	// defer logs.CloseLogger()
+
 	// Load konfigurasi dari .env
 	config.LoadEnv()
 
