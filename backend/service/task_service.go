@@ -60,7 +60,7 @@ func GetCompletedTasks(r *http.Request) ([]model.Task, error) {
 	var tasks []model.Task
 	if err := database.DB.
 		Where("completed = ?", true).
-		Order("updated_at DESC").
+		Order("created_at DESC").
 		Find(&tasks).Error; err != nil {
 		return nil, err
 	}
