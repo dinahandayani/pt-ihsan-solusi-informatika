@@ -1,26 +1,176 @@
-[2025-05-11 00:31:48] INFO: Koneksi ke database berhasil
-[2025-05-11 00:31:48] INFO: Server berjalan di http://localhost:8080
-[2025-05-11 00:33:10] INFO: Method=GET, IP=[::1]:52264, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil mengambil semua task dari database, total: 1
-[2025-05-11 00:33:10] INFO: Method=GET, IP=[::1]:52264, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=2.3178ms, Message=Fetched all tasks, total: 1
-[2025-05-11 00:34:01] INFO: Method=POST, IP=[::1]:52264, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=201, ResponseTime=0s, Message=Task berhasil dibuat di database, ID: 2
-[2025-05-11 00:34:01] INFO: Method=POST, IP=[::1]:52264, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=201, ResponseTime=5.269001ms, Message=Task created successfully, ID: 2
-[2025-05-11 00:34:05] INFO: Method=GET, IP=[::1]:52264, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil mengambil semua task dari database, total: 2
-[2025-05-11 00:34:05] INFO: Method=GET, IP=[::1]:52264, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=628.5µs, Message=Fetched all tasks, total: 2
-[2025-05-11 00:35:41] INFO: Method=PUT, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil memperbarui task ID: 2
-[2025-05-11 00:35:41] INFO: Method=PUT, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=5.3155ms, Message=Task updated successfully
-[2025-05-11 00:35:46] INFO: Method=GET, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil mengambil semua task dari database, total: 2
-[2025-05-11 00:35:46] INFO: Method=GET, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=605.6µs, Message=Fetched all tasks, total: 2
-[2025-05-11 00:35:52] INFO: Method=DELETE, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=204, ResponseTime=0s, Message=Berhasil menghapus task ID: 1
-[2025-05-11 00:35:52] INFO: Method=DELETE, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=204, ResponseTime=7.0671ms, Message=Task deleted successfully
-[2025-05-11 00:35:56] INFO: Method=DELETE, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=204, ResponseTime=0s, Message=Berhasil menghapus task ID: 2
-[2025-05-11 00:35:56] INFO: Method=DELETE, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=204, ResponseTime=3.2431ms, Message=Task deleted successfully
-[2025-05-11 00:35:57] INFO: Method=DELETE, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=204, ResponseTime=0s, Message=Berhasil menghapus task ID: 2
-[2025-05-11 00:35:57] INFO: Method=DELETE, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=204, ResponseTime=1.808201ms, Message=Task deleted successfully
-[2025-05-11 00:36:00] INFO: Method=GET, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil mengambil semua task dari database, total: 0
-[2025-05-11 00:36:00] INFO: Method=GET, IP=[::1]:52210, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=705.7µs, Message=Fetched all tasks, total: 0
-[2025-05-11 01:01:31] INFO: Koneksi ke database berhasil
-[2025-05-11 01:01:31] INFO: Server berjalan di http://localhost:8080
-[2025-05-11 01:18:38] INFO: Method=GET, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil mengambil semua task dari database, total: 0
-[2025-05-11 01:18:38] INFO: Method=GET, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=200, ResponseTime=6.363899ms, Message=Fetched all tasks, total: 0
-[2025-05-11 01:19:14] INFO: Method=POST, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=201, ResponseTime=0s, Message=Task berhasil dibuat di database, ID: 3
-[2025-05-11 01:19:14] INFO: Method=POST, IP=[::1]:52918, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks, Status=201, ResponseTime=8.774887ms, Message=Task created successfully, ID: 3
+[2025-05-11 13:13:28] INFO: Koneksi ke database berhasil
+[2025-05-11 13:13:28] INFO: Server berjalan di http://localhost:8080
+[2025-05-11 13:13:32] INFO: Koneksi ke database berhasil
+[2025-05-11 13:13:32] INFO: Server berjalan di http://localhost:8080
+[2025-05-11 13:13:35] INFO: Koneksi ke database berhasil
+[2025-05-11 13:13:35] INFO: Server berjalan di http://localhost:8080
+[2025-05-11 13:13:42] ERROR: Method=GET, IP=[::1]:37464, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks-id, Status=404, ResponseTime=0s, Error=Task tidak ditemukan, ID: 1
+[2025-05-11 13:13:42] ERROR: Method=GET, IP=[::1]:37464, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks-id, Status=404, ResponseTime=1.6029ms, Error=Task not found
+[2025-05-11 13:13:54] INFO: Method=GET, IP=[::1]:37464, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks-id, Status=200, ResponseTime=663.7µs, Message=Fetched task by ID
+[2025-05-11 13:16:14] ERROR: Method=GET, IP=[::1]:52688, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks-id, Status=404, ResponseTime=0s, Error=Task tidak ditemukan, ID: 1
+[2025-05-11 13:16:14] ERROR: Method=GET, IP=[::1]:52688, User-Agent=PostmanRuntime/7.43.4, Endpoint=/tasks-id, Status=404, ResponseTime=6.4195ms, Error=Task not found
+[2025-05-11 13:24:30] ERROR: Method=GET, IP=127.0.0.1:47538, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=1.1836ms, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:24:30] INFO: Method=GET, IP=127.0.0.1:47540, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=576.6µs, Message=Fetched completed tasks
+[2025-05-11 13:26:03] ERROR: Method=GET, IP=127.0.0.1:39964, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=645.1µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:26:03] INFO: Method=GET, IP=127.0.0.1:39966, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=381.9µs, Message=Fetched completed tasks
+[2025-05-11 13:26:15] ERROR: Method=GET, IP=127.0.0.1:41292, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=602.6µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:26:15] INFO: Method=GET, IP=127.0.0.1:41302, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=472.1µs, Message=Fetched completed tasks
+[2025-05-11 13:29:42] ERROR: Method=GET, IP=127.0.0.1:49494, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=742.3µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:29:42] INFO: Method=GET, IP=127.0.0.1:49502, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=487.7µs, Message=Fetched completed tasks
+[2025-05-11 13:29:47] ERROR: Method=GET, IP=127.0.0.1:49508, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=561.9µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:29:47] INFO: Method=GET, IP=127.0.0.1:49510, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=345µs, Message=Fetched completed tasks
+[2025-05-11 13:30:09] ERROR: Method=GET, IP=127.0.0.1:54844, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=601.1µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:30:09] INFO: Method=GET, IP=127.0.0.1:54854, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=438.5µs, Message=Fetched completed tasks
+[2025-05-11 13:30:11] ERROR: Method=GET, IP=127.0.0.1:54870, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=713.6µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:30:11] INFO: Method=GET, IP=127.0.0.1:54884, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=399.4µs, Message=Fetched completed tasks
+[2025-05-11 13:30:35] INFO: Method=POST, IP=127.0.0.1:53188, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=201, ResponseTime=0s, Message=Task berhasil dibuat di database, ID: 15
+[2025-05-11 13:30:35] INFO: Method=POST, IP=127.0.0.1:53188, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=201, ResponseTime=5.590101ms, Message=Task created successfully, ID: 15
+[2025-05-11 13:30:36] INFO: Method=GET, IP=127.0.0.1:53192, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=355.6µs, Message=Fetched ongoing tasks
+[2025-05-11 13:30:36] INFO: Method=GET, IP=127.0.0.1:53198, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=282.9µs, Message=Fetched completed tasks
+[2025-05-11 13:31:48] INFO: Method=GET, IP=127.0.0.1:49804, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=730.1µs, Message=Fetched ongoing tasks
+[2025-05-11 13:31:48] INFO: Method=GET, IP=127.0.0.1:49814, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=907.3µs, Message=Fetched completed tasks
+[2025-05-11 13:31:48] INFO: Method=GET, IP=127.0.0.1:49828, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=314.9µs, Message=Fetched ongoing tasks
+[2025-05-11 13:31:48] INFO: Method=GET, IP=127.0.0.1:49836, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=335.5µs, Message=Fetched completed tasks
+[2025-05-11 13:31:52] INFO: Method=GET, IP=127.0.0.1:38322, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=578.1µs, Message=Fetched ongoing tasks
+[2025-05-11 13:31:52] INFO: Method=GET, IP=127.0.0.1:38326, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=523.6µs, Message=Fetched completed tasks
+[2025-05-11 13:31:56] INFO: Method=GET, IP=127.0.0.1:38336, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=541µs, Message=Fetched ongoing tasks
+[2025-05-11 13:31:56] INFO: Method=GET, IP=127.0.0.1:38350, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=268.1µs, Message=Fetched completed tasks
+[2025-05-11 13:31:56] INFO: Method=GET, IP=127.0.0.1:38352, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=280µs, Message=Fetched ongoing tasks
+[2025-05-11 13:31:56] INFO: Method=GET, IP=127.0.0.1:38356, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=615.7µs, Message=Fetched completed tasks
+[2025-05-11 13:33:12] INFO: Method=GET, IP=127.0.0.1:54034, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=1.5392ms, Message=Fetched ongoing tasks
+[2025-05-11 13:33:12] INFO: Method=GET, IP=127.0.0.1:54046, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=636.5µs, Message=Fetched completed tasks
+[2025-05-11 13:33:13] INFO: Method=GET, IP=127.0.0.1:54056, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=338.8µs, Message=Fetched ongoing tasks
+[2025-05-11 13:33:13] INFO: Method=GET, IP=127.0.0.1:54060, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=329.2µs, Message=Fetched completed tasks
+[2025-05-11 13:33:38] INFO: Method=GET, IP=127.0.0.1:57216, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=845.6µs, Message=Fetched ongoing tasks
+[2025-05-11 13:33:38] INFO: Method=GET, IP=127.0.0.1:57230, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=505µs, Message=Fetched completed tasks
+[2025-05-11 13:34:02] INFO: Method=GET, IP=127.0.0.1:36950, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=782.5µs, Message=Fetched ongoing tasks
+[2025-05-11 13:34:02] INFO: Method=GET, IP=127.0.0.1:36966, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=516.5µs, Message=Fetched completed tasks
+[2025-05-11 13:34:03] INFO: Method=GET, IP=127.0.0.1:36970, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=465.9µs, Message=Fetched ongoing tasks
+[2025-05-11 13:34:03] INFO: Method=GET, IP=127.0.0.1:36980, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=413.2µs, Message=Fetched completed tasks
+[2025-05-11 13:34:06] INFO: Method=GET, IP=127.0.0.1:36988, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=651.2µs, Message=Fetched task by ID
+[2025-05-11 13:34:06] INFO: Method=GET, IP=127.0.0.1:36990, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=271.9µs, Message=Fetched ongoing tasks
+[2025-05-11 13:34:06] INFO: Method=GET, IP=127.0.0.1:37002, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=319µs, Message=Fetched completed tasks
+[2025-05-11 13:36:14] INFO: Method=GET, IP=127.0.0.1:37738, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=589.8µs, Message=Fetched task by ID
+[2025-05-11 13:36:14] INFO: Method=GET, IP=127.0.0.1:37742, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=445.3µs, Message=Fetched ongoing tasks
+[2025-05-11 13:36:14] INFO: Method=GET, IP=127.0.0.1:37756, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=387µs, Message=Fetched completed tasks
+[2025-05-11 13:36:26] INFO: Method=GET, IP=127.0.0.1:59646, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=533.4µs, Message=Fetched ongoing tasks
+[2025-05-11 13:36:26] INFO: Method=GET, IP=127.0.0.1:59654, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=359.3µs, Message=Fetched completed tasks
+[2025-05-11 13:36:32] INFO: Method=DELETE, IP=127.0.0.1:45690, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=204, ResponseTime=0s, Message=Berhasil menghapus task ID: 15
+[2025-05-11 13:36:32] INFO: Method=DELETE, IP=127.0.0.1:45690, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=200, ResponseTime=3.891101ms, Message=Task deleted successfully
+[2025-05-11 13:36:32] ERROR: Method=GET, IP=127.0.0.1:45700, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=316.7µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:36:32] INFO: Method=GET, IP=127.0.0.1:45714, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=300.6µs, Message=Fetched completed tasks
+[2025-05-11 13:36:44] ERROR: Method=GET, IP=127.0.0.1:57196, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=567.5µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:36:44] INFO: Method=GET, IP=127.0.0.1:57200, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=433.501µs, Message=Fetched completed tasks
+[2025-05-11 13:38:30] ERROR: Method=GET, IP=127.0.0.1:42712, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=483.1µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:38:30] INFO: Method=GET, IP=127.0.0.1:42724, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=410.9µs, Message=Fetched completed tasks
+[2025-05-11 13:39:33] ERROR: Method=GET, IP=127.0.0.1:40616, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=546.9µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:39:33] INFO: Method=GET, IP=127.0.0.1:40618, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=789.5µs, Message=Fetched completed tasks
+[2025-05-11 13:39:36] INFO: Method=DELETE, IP=127.0.0.1:40634, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=204, ResponseTime=0s, Message=Berhasil menghapus task ID: 11
+[2025-05-11 13:39:36] INFO: Method=DELETE, IP=127.0.0.1:40634, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=200, ResponseTime=6.558299ms, Message=Task deleted successfully
+[2025-05-11 13:39:36] ERROR: Method=GET, IP=127.0.0.1:40646, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=285.5µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:39:36] INFO: Method=GET, IP=127.0.0.1:40656, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=200, ResponseTime=349.3µs, Message=Fetched completed tasks
+[2025-05-11 13:39:37] INFO: Method=DELETE, IP=127.0.0.1:40672, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=204, ResponseTime=0s, Message=Berhasil menghapus task ID: 14
+[2025-05-11 13:39:37] INFO: Method=DELETE, IP=127.0.0.1:40672, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=200, ResponseTime=6.297499ms, Message=Task deleted successfully
+[2025-05-11 13:39:37] ERROR: Method=GET, IP=127.0.0.1:40674, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=311.1µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:39:37] ERROR: Method=GET, IP=127.0.0.1:40680, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=696.899µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:39:39] ERROR: Method=GET, IP=127.0.0.1:40696, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=511.7µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:39:39] ERROR: Method=GET, IP=127.0.0.1:40710, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=348.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:39:51] INFO: Method=POST, IP=127.0.0.1:46096, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=201, ResponseTime=0s, Message=Task berhasil dibuat di database, ID: 16
+[2025-05-11 13:39:51] INFO: Method=POST, IP=127.0.0.1:46096, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=201, ResponseTime=6.356298ms, Message=Task created successfully, ID: 16
+[2025-05-11 13:39:51] INFO: Method=GET, IP=127.0.0.1:46106, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=436.5µs, Message=Fetched ongoing tasks
+[2025-05-11 13:39:51] ERROR: Method=GET, IP=127.0.0.1:46114, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=593.5µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:39:53] INFO: Method=GET, IP=127.0.0.1:56124, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=709.999µs, Message=Fetched task by ID
+[2025-05-11 13:39:53] INFO: Method=GET, IP=127.0.0.1:56134, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=362.4µs, Message=Fetched ongoing tasks
+[2025-05-11 13:39:53] ERROR: Method=GET, IP=127.0.0.1:56146, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=640.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:40:06] INFO: Method=GET, IP=127.0.0.1:51068, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=652.7µs, Message=Fetched ongoing tasks
+[2025-05-11 13:40:06] ERROR: Method=GET, IP=127.0.0.1:51082, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=361.7µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:40:10] INFO: Method=GET, IP=127.0.0.1:51084, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=596.799µs, Message=Fetched task by ID
+[2025-05-11 13:40:10] INFO: Method=GET, IP=127.0.0.1:51088, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=537.5µs, Message=Fetched ongoing tasks
+[2025-05-11 13:40:10] ERROR: Method=GET, IP=127.0.0.1:51094, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=426.9µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:42:00] INFO: Method=GET, IP=127.0.0.1:51032, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=1.100001ms, Message=Fetched task by ID
+[2025-05-11 13:42:00] INFO: Method=GET, IP=127.0.0.1:51048, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=723.8µs, Message=Fetched ongoing tasks
+[2025-05-11 13:42:00] ERROR: Method=GET, IP=127.0.0.1:51062, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=696.5µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:42:46] INFO: Method=GET, IP=127.0.0.1:43864, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=591.9µs, Message=Fetched task by ID
+[2025-05-11 13:42:46] INFO: Method=GET, IP=127.0.0.1:43874, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=416.6µs, Message=Fetched ongoing tasks
+[2025-05-11 13:42:46] ERROR: Method=GET, IP=127.0.0.1:43886, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=382µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:43:09] INFO: Method=GET, IP=127.0.0.1:35938, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=522.199µs, Message=Fetched ongoing tasks
+[2025-05-11 13:43:09] ERROR: Method=GET, IP=127.0.0.1:35950, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=320.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:43:14] INFO: Method=GET, IP=127.0.0.1:59038, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=619.1µs, Message=Fetched task by ID
+[2025-05-11 13:43:14] INFO: Method=GET, IP=127.0.0.1:59052, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=379.8µs, Message=Fetched ongoing tasks
+[2025-05-11 13:43:14] ERROR: Method=GET, IP=127.0.0.1:59062, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=597.2µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:45:33] INFO: Method=GET, IP=127.0.0.1:56014, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=555.6µs, Message=Fetched task by ID
+[2025-05-11 13:45:33] INFO: Method=GET, IP=127.0.0.1:56020, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=328.9µs, Message=Fetched ongoing tasks
+[2025-05-11 13:45:33] ERROR: Method=GET, IP=127.0.0.1:56022, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=944.2µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:05] INFO: Method=GET, IP=127.0.0.1:53582, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=538.8µs, Message=Fetched task by ID
+[2025-05-11 13:46:05] INFO: Method=GET, IP=127.0.0.1:53586, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=439.2µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:05] ERROR: Method=GET, IP=127.0.0.1:53602, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=360.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:13] INFO: Method=GET, IP=127.0.0.1:35826, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=550.6µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:13] ERROR: Method=GET, IP=127.0.0.1:35838, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=275.5µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:14] INFO: Method=GET, IP=127.0.0.1:35848, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=576µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:14] ERROR: Method=GET, IP=127.0.0.1:35856, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=302.7µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:16] INFO: Method=GET, IP=127.0.0.1:35858, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=495.1µs, Message=Fetched task by ID
+[2025-05-11 13:46:16] INFO: Method=GET, IP=127.0.0.1:35866, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=525.5µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:16] ERROR: Method=GET, IP=127.0.0.1:35870, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=593.4µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:20] INFO: Method=PUT, IP=127.0.0.1:35878, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=563.4µs, Message=Fetched task by ID
+[2025-05-11 13:46:20] INFO: Method=GET, IP=127.0.0.1:35892, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=657.8µs, Message=Fetched task by ID
+[2025-05-11 13:46:20] INFO: Method=GET, IP=127.0.0.1:35894, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=500.7µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:20] ERROR: Method=GET, IP=127.0.0.1:35902, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=562.6µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:32] INFO: Method=GET, IP=127.0.0.1:35002, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=523.9µs, Message=Fetched task by ID
+[2025-05-11 13:46:32] INFO: Method=GET, IP=127.0.0.1:35004, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=375.9µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:32] ERROR: Method=GET, IP=127.0.0.1:35016, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=407.9µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:33] INFO: Method=PUT, IP=127.0.0.1:35020, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=455.1µs, Message=Fetched task by ID
+[2025-05-11 13:46:33] INFO: Method=GET, IP=127.0.0.1:35030, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=395.6µs, Message=Fetched task by ID
+[2025-05-11 13:46:33] INFO: Method=GET, IP=127.0.0.1:35042, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=494.4µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:33] ERROR: Method=GET, IP=127.0.0.1:35052, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=434.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:46:37] INFO: Method=PUT, IP=127.0.0.1:35066, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=593µs, Message=Fetched task by ID
+[2025-05-11 13:46:38] INFO: Method=GET, IP=127.0.0.1:35078, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=498.2µs, Message=Fetched task by ID
+[2025-05-11 13:46:38] INFO: Method=GET, IP=127.0.0.1:35086, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=494.7µs, Message=Fetched ongoing tasks
+[2025-05-11 13:46:38] ERROR: Method=GET, IP=127.0.0.1:35092, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=478.2µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:51:35] INFO: Method=GET, IP=127.0.0.1:37848, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=1.7012ms, Message=Fetched task by ID
+[2025-05-11 13:51:35] INFO: Method=GET, IP=127.0.0.1:37862, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=559.1µs, Message=Fetched ongoing tasks
+[2025-05-11 13:51:35] ERROR: Method=GET, IP=127.0.0.1:37876, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=429.8µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:51:38] INFO: Method=GET, IP=127.0.0.1:37880, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=588.3µs, Message=Fetched task by ID
+[2025-05-11 13:51:38] INFO: Method=GET, IP=127.0.0.1:37882, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=414.7µs, Message=Fetched ongoing tasks
+[2025-05-11 13:51:38] ERROR: Method=GET, IP=127.0.0.1:37886, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=387.1µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:51:39] INFO: Method=GET, IP=127.0.0.1:37898, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=689.2µs, Message=Fetched ongoing tasks
+[2025-05-11 13:51:39] ERROR: Method=GET, IP=127.0.0.1:37908, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=185.9µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:51:41] INFO: Method=GET, IP=127.0.0.1:37922, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=524µs, Message=Fetched task by ID
+[2025-05-11 13:51:41] INFO: Method=GET, IP=127.0.0.1:37936, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=337µs, Message=Fetched ongoing tasks
+[2025-05-11 13:51:41] ERROR: Method=GET, IP=127.0.0.1:37942, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=305.7µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:52:46] INFO: Method=GET, IP=127.0.0.1:55324, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=657.6µs, Message=Fetched task by ID
+[2025-05-11 13:52:46] INFO: Method=GET, IP=127.0.0.1:55330, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=339.2µs, Message=Fetched ongoing tasks
+[2025-05-11 13:52:46] ERROR: Method=GET, IP=127.0.0.1:55342, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=348µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:52:48] INFO: Method=GET, IP=127.0.0.1:55346, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=598.4µs, Message=Fetched ongoing tasks
+[2025-05-11 13:52:48] ERROR: Method=GET, IP=127.0.0.1:55350, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=320.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:52:49] INFO: Method=GET, IP=127.0.0.1:55362, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=599.3µs, Message=Fetched task by ID
+[2025-05-11 13:52:49] INFO: Method=GET, IP=127.0.0.1:55374, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=800.9µs, Message=Fetched ongoing tasks
+[2025-05-11 13:52:49] ERROR: Method=GET, IP=127.0.0.1:55386, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=342.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:52:52] INFO: Method=PUT, IP=127.0.0.1:60518, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=544.7µs, Message=Fetched task by ID
+[2025-05-11 13:52:52] INFO: Method=GET, IP=127.0.0.1:60530, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=471.6µs, Message=Fetched ongoing tasks
+[2025-05-11 13:52:53] ERROR: Method=GET, IP=127.0.0.1:60532, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=299.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:52:55] INFO: Method=GET, IP=127.0.0.1:60540, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=577.7µs, Message=Fetched ongoing tasks
+[2025-05-11 13:52:55] ERROR: Method=GET, IP=127.0.0.1:60546, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=322µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:53:15] INFO: Method=GET, IP=127.0.0.1:52896, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=579.2µs, Message=Fetched ongoing tasks
+[2025-05-11 13:53:15] ERROR: Method=GET, IP=127.0.0.1:52898, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=602.6µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:53:53] INFO: Method=GET, IP=127.0.0.1:38310, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=674.1µs, Message=Fetched ongoing tasks
+[2025-05-11 13:53:53] ERROR: Method=GET, IP=127.0.0.1:38326, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=476.7µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:53:56] INFO: Method=GET, IP=127.0.0.1:38334, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=544.2µs, Message=Fetched ongoing tasks
+[2025-05-11 13:53:56] ERROR: Method=GET, IP=127.0.0.1:38340, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=365µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:53:59] INFO: Method=GET, IP=127.0.0.1:38356, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=472.7µs, Message=Fetched task by ID
+[2025-05-11 13:53:59] INFO: Method=GET, IP=127.0.0.1:38366, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=383.7µs, Message=Fetched ongoing tasks
+[2025-05-11 13:53:59] ERROR: Method=GET, IP=127.0.0.1:38372, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=310.3µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:54:01] INFO: Method=PUT, IP=127.0.0.1:60956, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=200, ResponseTime=0s, Message=Berhasil memperbarui task ID: 16
+[2025-05-11 13:54:01] INFO: Method=PUT, IP=127.0.0.1:60956, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=200, ResponseTime=6.5766ms, Message=Task updated successfully
+[2025-05-11 13:54:02] INFO: Method=GET, IP=127.0.0.1:60970, User-Agent=GuzzleHttp/7, Endpoint=/tasks-id, Status=200, ResponseTime=351.1µs, Message=Fetched task by ID
+[2025-05-11 13:54:02] INFO: Method=GET, IP=127.0.0.1:60984, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=200, ResponseTime=487µs, Message=Fetched ongoing tasks
+[2025-05-11 13:54:02] ERROR: Method=GET, IP=127.0.0.1:60988, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=443.7µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:54:04] INFO: Method=DELETE, IP=127.0.0.1:60996, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=204, ResponseTime=0s, Message=Berhasil menghapus task ID: 16
+[2025-05-11 13:54:04] INFO: Method=DELETE, IP=127.0.0.1:60996, User-Agent=GuzzleHttp/7, Endpoint=/tasks, Status=200, ResponseTime=3.231898ms, Message=Task deleted successfully
+[2025-05-11 13:54:05] ERROR: Method=GET, IP=127.0.0.1:32778, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=343.2µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:54:05] ERROR: Method=GET, IP=127.0.0.1:32794, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=339µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:54:07] ERROR: Method=GET, IP=127.0.0.1:32810, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=442.999µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:54:07] ERROR: Method=GET, IP=127.0.0.1:32816, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=272.4µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:54:40] ERROR: Method=GET, IP=127.0.0.1:39556, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=553.4µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:54:40] ERROR: Method=GET, IP=127.0.0.1:39572, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=450.5µs, Error=Data task completed tidak ditemukan
+[2025-05-11 13:57:10] ERROR: Method=GET, IP=127.0.0.1:51092, User-Agent=GuzzleHttp/7, Endpoint=/tasks-ongoing, Status=404, ResponseTime=616.9µs, Error=Data task ongoing tidak ditemukan
+[2025-05-11 13:57:10] ERROR: Method=GET, IP=127.0.0.1:51098, User-Agent=GuzzleHttp/7, Endpoint=/tasks-completed, Status=404, ResponseTime=674.6µs, Error=Data task completed tidak ditemukan

@@ -6,113 +6,171 @@ import (
 	"ptihsan/logs"
 	"ptihsan/model"
 	"ptihsan/service"
+	"ptihsan/utils"
 	"strconv"
 	"time"
 )
 
 func CreateTask(w http.ResponseWriter, r *http.Request) {
-	start := time.Now() // Track start time
+	start := time.Now()
 
-	var task model.Task
-	// Parse request body
-	if err := json.NewDecoder(r.Body).Decode(&task); err != nil {
-		// Log error dengan parameter yang sesuai
+	// Ambil input dari body request
+	var input struct {
+		Title string `json:"title"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
 		logs.LogError(r, "Bad Request: "+err.Error(), http.StatusBadRequest, time.Since(start))
-		http.Error(w, "Bad Request", http.StatusBadRequest)
+		utils.RespondError(w, http.StatusBadRequest, "Permintaan tidak valid")
 		return
 	}
 
-	// Panggil service untuk membuat task baru, sekarang dengan request r
-	newTask, err := service.CreateTask(r, task) // Menambahkan r sebagai parameter
+	// Buat task baru
+	task := model.Task{
+		Title:     input.Title,
+		Completed: false,
+	}
+
+	newTask, err := service.CreateTask(r, task)
 	if err != nil {
 		logs.LogError(r, "Error creating task: "+err.Error(), http.StatusInternalServerError, time.Since(start))
-		http.Error(w, "Error creating task", http.StatusInternalServerError)
+		utils.RespondError(w, http.StatusInternalServerError, "Gagal membuat task")
 		return
 	}
 
-	// Kirim response
-	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusCreated)
-	json.NewEncoder(w).Encode(newTask)
-
-	// Log sukses
 	logs.LogInfo(r, "Task created successfully, ID: "+strconv.Itoa(int(newTask.ID)), http.StatusCreated, time.Since(start))
-}
-
-func GetTasks(w http.ResponseWriter, r *http.Request) {
-	start := time.Now() // Track start time
-
-	// Panggil service untuk mengambil semua tasks, sekarang dengan request r
-	tasks, err := service.GetTasks(r) // Menambahkan r sebagai parameter
-	if err != nil {
-		logs.LogError(r, "Error fetching tasks: "+err.Error(), http.StatusInternalServerError, time.Since(start))
-		http.Error(w, "Error fetching tasks", http.StatusInternalServerError)
-		return
-	}
-
-	// Kirim response
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(tasks)
-
-	// Log sukses
-	logs.LogInfo(r, "Fetched all tasks, total: "+strconv.Itoa(len(tasks)), http.StatusOK, time.Since(start))
+	utils.RespondSuccess(w, http.StatusCreated, "Task berhasil dibuat", newTask)
 }
 
 func UpdateTask(w http.ResponseWriter, r *http.Request) {
-	start := time.Now() // Track start time
+	start := time.Now()
 
-	// Mengambil ID dari URL query parameter
+	// Ambil ID dari query
 	id, err := strconv.ParseUint(r.URL.Query().Get("id"), 10, 32)
 	if err != nil {
 		logs.LogError(r, "Invalid Task ID", http.StatusBadRequest, time.Since(start))
-		http.Error(w, "Invalid Task ID", http.StatusBadRequest)
+		utils.RespondError(w, http.StatusBadRequest, "Task ID tidak valid")
 		return
 	}
 
-	var task model.Task
-	// Parse request body
-	if err := json.NewDecoder(r.Body).Decode(&task); err != nil {
+	// Ambil input title dari body
+	var input struct {
+		Title string `json:"title"`
+	}
+	if err := json.NewDecoder(r.Body).Decode(&input); err != nil {
 		logs.LogError(r, "Bad Request", http.StatusBadRequest, time.Since(start))
-		http.Error(w, "Bad Request", http.StatusBadRequest)
+		utils.RespondError(w, http.StatusBadRequest, "Permintaan tidak valid")
 		return
 	}
 
-	// Panggil service untuk memperbarui task, sekarang dengan request r
-	updatedTask, err := service.UpdateTask(r, uint(id), task) // Menambahkan r sebagai parameter
+	// Update task melalui service
+	updatedTask, err := service.UpdateTask(r, uint(id), input.Title)
 	if err != nil {
 		logs.LogError(r, "Error updating task", http.StatusInternalServerError, time.Since(start))
-		http.Error(w, "Error updating task", http.StatusInternalServerError)
+		utils.RespondError(w, http.StatusInternalServerError, "Gagal mengupdate task")
 		return
 	}
 
-	// Kirim response
-	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(updatedTask)
-
-	// Log sukses
 	logs.LogInfo(r, "Task updated successfully", http.StatusOK, time.Since(start))
+	utils.RespondSuccess(w, http.StatusOK, "Task berhasil diupdate", updatedTask)
 }
 
 func DeleteTask(w http.ResponseWriter, r *http.Request) {
-	start := time.Now() // Track start time
+	start := time.Now()
 
+	// Ambil ID dari query
 	id, err := strconv.ParseUint(r.URL.Query().Get("id"), 10, 32)
 	if err != nil {
 		logs.LogError(r, "Invalid Task ID", http.StatusBadRequest, time.Since(start))
-		http.Error(w, "Invalid Task ID", http.StatusBadRequest)
+		utils.RespondError(w, http.StatusBadRequest, "Task ID tidak valid")
 		return
 	}
 
-	// Panggil service untuk menghapus task
+	// Hapus task via service
 	if err := service.DeleteTask(r, uint(id)); err != nil {
-		logs.LogError(r, "Error deleting task", http.StatusInternalServerError, time.Since(start))
-		http.Error(w, "Error deleting task", http.StatusInternalServerError)
+		logs.LogError(r, "Gagal menghapus task", http.StatusInternalServerError, time.Since(start))
+		utils.RespondError(w, http.StatusInternalServerError, "Gagal menghapus task")
 		return
 	}
 
-	// Kirim response
-	w.WriteHeader(http.StatusNoContent)
+	logs.LogInfo(r, "Task deleted successfully", http.StatusOK, time.Since(start))
+	utils.RespondSuccess(w, http.StatusOK, "Task berhasil dihapus", nil)
+}
 
-	// Log sukses
-	logs.LogInfo(r, "Task deleted successfully", http.StatusNoContent, time.Since(start))
+func GetOngoingTasks(w http.ResponseWriter, r *http.Request) {
+	start := time.Now()
+
+	tasks, err := service.GetOngoingTasks(r)
+	if err != nil || len(tasks) == 0 {
+		logs.LogError(r, "Data task ongoing tidak ditemukan", http.StatusNotFound, time.Since(start))
+		utils.RespondError(w, http.StatusNotFound, "Data task ongoing tidak ditemukan")
+		return
+	}
+
+	logs.LogInfo(r, "Fetched ongoing tasks", http.StatusOK, time.Since(start))
+	utils.RespondSuccess(w, http.StatusOK, "Data task ongoing ditemukan", tasks)
+}
+
+func GetCompletedTasks(w http.ResponseWriter, r *http.Request) {
+	start := time.Now()
+
+	tasks, err := service.GetCompletedTasks(r)
+	if err != nil {
+		logs.LogError(r, "Error fetching completed tasks: "+err.Error(), http.StatusInternalServerError, time.Since(start))
+		utils.RespondError(w, http.StatusInternalServerError, "Terjadi kesalahan saat mengambil data task completed")
+		return
+	}
+
+	if len(tasks) == 0 {
+		logs.LogError(r, "Data task completed tidak ditemukan", http.StatusNotFound, time.Since(start))
+		utils.RespondError(w, http.StatusNotFound, "Data task completed tidak ditemukan")
+		return
+	}
+
+	logs.LogInfo(r, "Fetched completed tasks", http.StatusOK, time.Since(start))
+	utils.RespondSuccess(w, http.StatusOK, "Data task completed ditemukan", tasks)
+}
+
+func SignToCompleted(w http.ResponseWriter, r *http.Request) {
+	start := time.Now()
+
+	// Ambil ID dari query
+	id, err := strconv.ParseUint(r.URL.Query().Get("id"), 10, 32)
+	if err != nil {
+		logs.LogError(r, "Invalid Task ID", http.StatusBadRequest, time.Since(start))
+		utils.RespondError(w, http.StatusBadRequest, "Task ID tidak valid")
+		return
+	}
+
+	// Tandai task sebagai completed
+	if err := service.MarkTaskAsCompleted(r, uint(id)); err != nil {
+		logs.LogError(r, "Gagal menandai task sebagai selesai", http.StatusInternalServerError, time.Since(start))
+		utils.RespondError(w, http.StatusInternalServerError, "Gagal menandai task sebagai selesai")
+		return
+	}
+
+	logs.LogInfo(r, "Task marked as completed", http.StatusOK, time.Since(start))
+	utils.RespondSuccess(w, http.StatusOK, "Task berhasil ditandai sebagai selesai", nil)
+}
+
+func GetTaskByID(w http.ResponseWriter, r *http.Request) {
+	start := time.Now()
+
+	// Ambil ID dari query parameter
+	id, err := strconv.ParseUint(r.URL.Query().Get("id"), 10, 32)
+	if err != nil {
+		logs.LogError(r, "Invalid Task ID", http.StatusBadRequest, time.Since(start))
+		utils.RespondError(w, http.StatusBadRequest, "Task ID tidak valid")
+		return
+	}
+
+	// Ambil task dari service berdasarkan ID
+	task, err := service.GetTaskByID(r, uint(id))
+	if err != nil {
+		logs.LogError(r, "Task not found", http.StatusNotFound, time.Since(start))
+		utils.RespondError(w, http.StatusNotFound, "Task tidak ditemukan")
+		return
+	}
+
+	logs.LogInfo(r, "Fetched task by ID", http.StatusOK, time.Since(start))
+	utils.RespondSuccess(w, http.StatusOK, "Task ditemukan", task)
 }
