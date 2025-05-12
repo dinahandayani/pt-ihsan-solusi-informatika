@@ -1,0 +1,15 @@
+FROM golang:1.23.9
+
+WORKDIR /app
+COPY backend/ ./
+
+RUN go mod tidy
+
+# Install air
+RUN go install github.com/air-verse/air@latest
+
+# Copy entrypoint
+COPY backend/entrypoint.sh ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
+
+ENTRYPOINT ["./entrypoint.sh"]

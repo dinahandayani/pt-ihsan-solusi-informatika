@@ -10,8 +10,8 @@ class TaskController extends Controller
     public function index()
     {
         // Ambil data dari API
-        $response_o = Http::get('http://localhost:8080/tasks-ongoing');
-        $response_c = Http::get('http://localhost:8080/tasks-completed');
+        $response_o = Http::get(env('BACKEND_URL', 'http://localhost:8080').'/tasks-ongoing');
+        $response_c = Http::get(env('BACKEND_URL', 'http://localhost:8080').'/tasks-completed');
 
         // Cek jika responsenya sukses
         $tasks_o = $response_o->successful() && isset($response_o['data']) ? $response_o['data'] : [];
@@ -31,7 +31,7 @@ class TaskController extends Controller
         ]);
 
         // Kirim data ke backend Go
-        $response = Http::post('http://localhost:8080/tasks', [
+        $response = Http::post(env('BACKEND_URL', 'http://localhost:8080').'/tasks', [
             'title' => $request->title,
         ]);
 
@@ -47,7 +47,7 @@ class TaskController extends Controller
     public function destroy($id)
     {
         // Kirim permintaan DELETE ke backend Go dengan ID di URL
-        $response = Http::delete("http://localhost:8080/tasks?id={$id}");
+        $response = Http::delete(env('BACKEND_URL', 'http://localhost:8080')."/tasks?id={$id}");
 
         // Cek apakah permintaan DELETE berhasil
         if ($response->successful() && $response['status'] === 'success') {
@@ -61,7 +61,7 @@ class TaskController extends Controller
     public function signtocompleted($id)
     {
         // Kirim permintaan PUT ke backend Go dengan ID di URL sebagai query parameter
-        $response = Http::put("http://localhost:8080/sign-to-completed?id={$id}", [
+        $response = Http::put(env('BACKEND_URL', 'http://localhost:8080')."/sign-to-completed?id={$id}", [
             'completed' => true,  // Body raw untuk menandai task sebagai completed
         ]);
 
@@ -77,11 +77,11 @@ class TaskController extends Controller
     public function edit($id)
     {
         // Mengambil data task berdasarkan ID dari API
-        $response = Http::get("http://localhost:8080/tasks-id?id={$id}");
+        $response = Http::get(env('BACKEND_URL', 'http://localhost:8080')."/tasks-id?id={$id}");
 
         // Ambil data dari API
-        $response_o = Http::get('http://localhost:8080/tasks-ongoing');
-        $response_c = Http::get('http://localhost:8080/tasks-completed');
+        $response_o = Http::get(env('BACKEND_URL', 'http://localhost:8080').'/tasks-ongoing');
+        $response_c = Http::get(env('BACKEND_URL', 'http://localhost:8080').'/tasks-completed');
 
         // Cek jika responsenya sukses
         $tasks_o = $response_o->successful() && isset($response_o['data']) ? $response_o['data'] : [];
@@ -111,7 +111,7 @@ class TaskController extends Controller
         $title = $request->input('title');
 
         // Kirim PUT request ke API eksternal
-        $response = Http::put("http://localhost:8080/tasks?id={$id}", [
+        $response = Http::put(env('BACKEND_URL', 'http://localhost:8080')."/tasks?id={$id}", [
             'title' => $title
         ]);
 

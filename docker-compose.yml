@@ -1,0 +1,44 @@
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: todo_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  todo-backend:
+    container_name: todo-backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    working_dir: /app
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: todo_db
+
+  todo-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    working_dir: /var/www/html
+    ports:
+      - "8000:8000"     # Laravel
+      - "5173:5173"     # Vite
+    depends_on:
+      - todo-backend
+    environment:
+      BACKEND_URL: http://todo-backend:8080
+
+volumes:
+  pgdata:
